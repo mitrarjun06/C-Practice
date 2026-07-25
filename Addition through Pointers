@@ -1,0 +1,16 @@
+/* Print the sum of numbers using a pointer */
+
+#include <stdio.h>
+int main()
+{
+    int fno, sno, *ptr, *qtr, sum;
+    scanf("%d %d", &fno, &sno);
+    if(fno<1||fno>100||sno<1||sno>100) printf("Invalid Input");
+    else{
+    ptr = &fno;
+    qtr = &sno;
+    sum = *ptr + *qtr;
+    printf("%d", sum);
+}
+	return 0;
+}
