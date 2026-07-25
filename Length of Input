@@ -1,0 +1,22 @@
+/* Print the length of output */
+
+#include <stdio.h>
+#include <string.h>
+#define CHECK ((stdin) == NULL || strlen(str1) > 50)
+int main()
+{
+    char str1[10000];
+    int count = 0;
+    fgets(str1, sizeof(str1), stdin);
+    if(CHECK){
+        printf("Invalid input. Please enter a string with at most 50 characters.");
+        return 0;
+    }
+    char *ch = str1;
+    while (*ch != '\0'){
+        count++;
+        ch += 1;
+    }
+    printf("Length of the string: %d", count);
+	return 0;
+}
