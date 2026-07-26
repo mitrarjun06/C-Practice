@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main()
+{
+    int nooffamilymembers;
+    scanf("%d", &nooffamilymembers);
+    int num = nooffamilymembers, i,j;
+    for(i = 0; i < nooffamilymembers; i++){
+        for(j = 0; j < num; j++){
+            printf("%d ",num);
+        }
+        printf("\n");
+        num--;
+    }
+	return 0;
+}
