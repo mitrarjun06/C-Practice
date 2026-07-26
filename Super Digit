@@ -1,0 +1,22 @@
+#include <stdio.h>
+int sumd(int n){
+    int sum = 0;
+    while (n){
+        sum += n%10;
+        n /= 10;
+    }
+    return sum;
+}
+int superd(int num){
+    if(num<10) return num;
+    return superd(sumd(num));
+}
+int main()
+{
+    int num,k;
+    scanf("%d %d", &num, &k);
+    if (num>10000 || num<1 || k<1 ||k>100){
+        printf("Invaild Input");
+    }else printf("%d", superd(num*k));
+	return 0;
+}
