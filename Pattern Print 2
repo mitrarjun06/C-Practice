@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main()
+{
+    int noofrows;
+    scanf("%d", &noofrows);
+    int i,j;
+    for(i = 1; i < (noofrows+1); i++){
+        for(j = i; j < i*2; j++){
+            printf("%d ", i);
+        }
+        printf("\n");
+    }
+	return 0;
+}
