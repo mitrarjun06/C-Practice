@@ -1,0 +1,16 @@
+#include <stdio.h>
+long addTwoNumbers(long *n1,long *n2) {
+    long sum = *n1 + *n2;
+    return sum;
+}
+int main()
+{
+    long fno, fno2;
+    scanf("%ld %ld", &fno, &fno2);
+    if(fno<=1||fno>=100||fno<=1||fno>=100){
+        printf("Invalid Input");
+    }else{
+        printf("%ld", addTwoNumbers(&fno, &fno2));
+    }
+	return 0;
+}
