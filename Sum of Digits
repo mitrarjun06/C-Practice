@@ -1,0 +1,19 @@
+#include <stdio.h>
+int sum(int);
+int main()
+{
+    int num, result;
+    scanf("%d", &num);
+    if (num < 1 || num > 1000000){
+        printf("Invalid Input");
+    }else{
+        result=sum(num);
+        printf("%d", result);
+    }
+	return 0;}
+int sum(int num){
+    int sum = 0;
+    while(num>0){sum += (num%10);
+    num /= 10;
+    }return sum;
+}
