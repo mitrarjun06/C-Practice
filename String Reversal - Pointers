@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main()
+{
+    char str[50];
+    fgets(str,sizeof(str),stdin);
+       char rev[50];
+    char *sptr = str;
+    char *ptr = str;
+    char *rptr = rev;
+    int len = 0;
+    while(*ptr != '\0' && *ptr != '\n'){
+        len++;
+        ptr++;
+    }
+    if (len>15){printf("Invalid Input");return 0;}
+    ptr = str + len - 1;
+    for (; ptr >= sptr; ptr--){
+        *rptr = *ptr;
+        rptr++;
+    }
+    *rptr = '\0';
+    printf("Reversed string: %s", rev);
+	return 0;
+}
