@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+{
+    int noofrowsinclass;
+    scanf("%d", &noofrowsinclass);
+    if(noofrowsinclass > 15){
+        printf("invaild");
+        return 0;
+    }
+    for(int i = 1; i<=noofrowsinclass;i++){
+        for(int j = 0; j<i;j++){
+            if(i % 2 == 1){
+                printf("Pass ");
+            }else{
+                printf("Fail ");
+            }
+        }
+        printf("\n");
+    }
+	return 0;}
