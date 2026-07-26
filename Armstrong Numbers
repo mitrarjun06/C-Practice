@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+int check_armstrong(int);
+int main()
+{
+    int start, end,sum1;
+    scanf("%d %d", &start,&end);
+    if (start<0 || start>50|| end>1000){
+        printf("Invalid Input");
+    }else{
+        while (start <= end){
+            sum1 = check_armstrong(start);
+            if(sum1==1) printf("%d ",start);
+            start++;
+        }
+    }
+	return 0;
+}
+int check_armstrong(int n){
+    int sum=0,digit, no=n;
+    while(no>0){
+        digit = no%10;
+        sum = sum + pow(digit,3);
+        no /= 10;
+    }
+    if (n == sum){ n=1;}
+    return n;
+}
