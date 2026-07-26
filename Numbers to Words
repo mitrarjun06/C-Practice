@@ -1,0 +1,32 @@
+#include <stdio.h>
+const char *a[] = {"","one","two","three","four","five","six","seven","eight","nine"};
+const char *b[] = {"","","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"};
+const char *c[] = {"ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"};
+void word(int n){
+    if(n>=1000){
+        printf("%s thousand", a[n/1000]);
+        n%=1000;
+        if(n) printf(" ");
+    }
+    if(n >= 100){
+        printf("%s hundred", a[n/100]);
+        n %=100;
+        if (n) printf(" and ");
+    }
+    if( n >= 20){
+        printf("%s", b[n/10]);
+        if (n%10) printf(" %s", a[n%10]);
+    }else if(n>=10){
+        printf("%s", c[n-10]);
+    }else if(n>0){
+        printf("%s", a[n]);
+    }
+}
+int main()
+{
+    int T;
+    scanf("%d", &T);
+    word(T);
+    printf("\n");
+	return 0;
+}
