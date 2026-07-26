@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main()
+{
+    int N,i,j,k;
+    scanf("%d", &N);
+    for(k=1;k<=N;k++){
+        if(k%2){
+            for(i=1;i<=k*2;i+=2)printf("%d ",i);
+        }else{
+            for(j=2;j<=k*2;j+=2)printf("%d ",j);
+        }
+        printf("\n");
+    }
+	return 0;}
