@@ -1,0 +1,24 @@
+#include <stdio.h>
+struct fraction{
+    int numerator, denominator;
+};
+int main()
+{
+    struct fraction f1,f2;
+    scanf("%d %d", &f1.numerator,&f1.denominator);
+    scanf("%d %d", &f2.numerator,&f2.denominator);
+    if (f1.numerator<0 || f1.denominator<0 || f2.numerator<0 || f2.denominator<0){
+        printf("Invalid Input"); 
+        return 0;
+    }
+    int q1 = f1.numerator / f1.denominator;
+    int q2 = f2.numerator / f2.denominator;
+    if (q1 == q2){
+        printf("%d/%d is equal to %d/%d", f1.numerator,f1.denominator,f2.numerator,f2.denominator);
+    } else if (q1>q2){
+        printf("%d/%d is greater than %d/%d",f1.numerator,f1.denominator,f2.numerator,f2.denominator);
+    } else{
+        printf("%d/%d is greater than %d/%d", f2.numerator,f2.denominator,f1.numerator,f1.denominator);
+    }
+	return 0;
+}
