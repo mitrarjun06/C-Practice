@@ -1,0 +1,24 @@
+#include <stdio.h>
+struct groceryshop{
+    char name[19];
+    int qty;
+    float price,gst;
+};
+int main()
+{
+    struct groceryshop tax;
+    scanf("%s", tax.name);
+    if (scanf("%d", &tax.qty) != 1 || tax.qty <= 0){
+        printf("Invalid input for quantity");
+        return 0;
+    }
+    if (scanf("%f", &tax.price) != 1 || tax.price <= 0){
+        printf("Invalid input for price.");
+        return 0;
+    }
+    tax.gst = tax.price * tax.qty;
+    printf("GST: %.2f",tax.gst);
+    printf("\nGST Amount: %.2f", tax.gst * 0.14);
+    printf("\nTotal including GST: %.2f", tax.gst * 0.14 + tax.gst);
+    return 0;
+}
